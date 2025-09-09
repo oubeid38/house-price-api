@@ -7,7 +7,9 @@ WORKDIR /app
 #Copier requirements.txt et installer les dépendances
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-
+# copie COPY prepare_model.py  et run COPY prepare_model.py .
+COPY prepare_model.py ./
+RUN python prepare_model.py
 #Copier les fichiers nécessaires
 COPY api_housing.py ./ 
 COPY house_price_model.pkl ./ 
