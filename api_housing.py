@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # Créer l'application
 app = FastAPI(title="API Prédiction Prix Maisons")
-origins = ["https://housing-static-site.onrender.com/"]
+origins = ["https://housing-static-site.onrender.com"]
 app.add_middleware(    CORSMiddleware,    allow_origins=origins,    allow_credentials=True,    allow_methods=["*"],    allow_headers=["*"],)
  
 
